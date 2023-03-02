@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Head from "next/head";
+import Input from "@/components/base/input/Input";
 import Cards from "@/components/module/cards/Cards";
 import Header from "@/components/base/header/Header";
 import Profile from "@/components/module/profile/Profile";
@@ -13,7 +13,7 @@ import pworld from "../../public/img/pworld.png";
 import recipe from "../../public/img/recipe.png";
 
 export default function Home() {
-  const [background, setBackground] = useState("#fff");
+  const [background, setBackground] = useState("#192734");
   return (
     <div className={`bg-[${background}] pb-20`}>
       <div className="w-11/12 mx-auto">
@@ -197,7 +197,7 @@ as a Frontend Developer."
           </div>
         </section>
 
-        {/* <section className="mt-10 mb-20 flex justify-center" id="contact">
+        <section className="mt-10 mb-20 flex justify-center" id="contact">
           <div
             className={
               background === "#fff"
@@ -208,23 +208,23 @@ as a Frontend Developer."
             <h1 className="text-2xl font-bold text-center mb-7">
               Get in touch
             </h1>
-            <form action="https://formsubmit.co/mrifqiay@email.com" method="POST">
+            <form action="https://formspree.io/f/meqwkzov" method="POST">
               <div>
                 <label htmlFor="name">Name</label>
-                <Input type="text" id="name" />
+                <Input type="text" name="name" id="name" />
               </div>
               <div className="mt-3">
                 <label htmlFor="subject">Subject</label>
-                <Input type="text" id="subject" />
+                <Input type="text" name="subject" id="subject" />
               </div>
               <div className="mt-3">
                 <label htmlFor="email">Email</label>
-                <Input type="text" id="email" />
+                <Input type="emaiil" name="email" id="email" />
               </div>
               <div className="flex flex-col mt-3">
                 <label htmlFor="message">Message</label>
                 <textarea
-                  name=""
+                  name="message"
                   id=""
                   cols="30"
                   rows="7"
@@ -232,7 +232,7 @@ as a Frontend Developer."
                 ></textarea>
               </div>
               <button
-              type="submit"
+                type="submit"
                 className={
                   background === "#fff"
                     ? "bg-black text-white w-full p-2 rounded-sm mt-5"
@@ -243,7 +243,7 @@ as a Frontend Developer."
               </button>
             </form>
           </div>
-        </section> */}
+        </section>
       </div>
     </div>
   );
