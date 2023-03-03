@@ -861,5 +861,10 @@ video {
   .lg\:text-\[25px\] {
     font-size: 25px;
   }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
